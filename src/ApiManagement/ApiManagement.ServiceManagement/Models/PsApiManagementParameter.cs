@@ -12,6 +12,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+using System.Collections.Generic;
+
 namespace Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models
 {
     public class PsApiManagementParameter
@@ -27,5 +29,7 @@ namespace Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models
         public bool Required { get; set; }
 
         public string[] Values { get; set; }
+
+        public IDictionary<string, PsApiManagementParameterExample> Examples { get; set; }
     }
 }

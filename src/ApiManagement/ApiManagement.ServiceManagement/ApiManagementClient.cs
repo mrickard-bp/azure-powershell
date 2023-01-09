@@ -82,7 +82,8 @@ namespace Microsoft.Azure.Commands.ApiManagement.ServiceManagement
                     .ForMember(dest => dest.DefaultValue, opt => opt.MapFrom(src => src.DefaultValue))
                     .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
                     .ForMember(dest => dest.Required, opt => opt.MapFrom(src => src.Required))
-                    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
+                    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                    .ForMember(dest => dest.Examples, opt => opt.MapFrom(src => src.Examples));
 
                 cfg
                     .CreateMap<PsApiManagementRequest, RequestContract>()
